@@ -69,8 +69,6 @@ def main():
     
     Partisipan dimohon memberikan penilaian terkait kualitas audio yang dihasilkan oleh model TTS. 
     
-    **⚠️ Penting:** Saat ingin mendengarkan audio, tolong agar membuka link audio di tab baru agar tidak meninggalkan form ini.
-    
     ### Model yang Dievaluasi:
     
     **Untuk Dataset Sunda:**
