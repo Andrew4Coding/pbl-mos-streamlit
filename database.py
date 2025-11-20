@@ -211,6 +211,33 @@ def check_participant_exists(email):
         cur.close()
         conn.close()
 
+def get_all_participants():
+    """Retrieve all participants with their submission count"""
+    conn = get_db_connection()
+    cur = conn.cursor(cursor_factory=RealDictCursor)
+    
+    try:
+        cur.execute("""
+            SELECT 
+                p.id,
+                p.name,
+                p.email,
+                p.created_at,
+                COUNT(e.id) as total_evaluations
+            FROM participants p
+            LEFT JOIN evaluations e ON p.id = e.participant_id
+            GROUP BY p.id, p.name, p.email, p.created_at
+            ORDER BY p.created_at DESC
+        """)
+        
+        return cur.fetchall()
+        
+    except Exception as e:
+        raise Exception(f"Error retrieving participants: {str(e)}")
+    finally:
+        cur.close()
+        conn.close()
+
 if __name__ == "__main__":
     # Initialize database when run directly
     try:

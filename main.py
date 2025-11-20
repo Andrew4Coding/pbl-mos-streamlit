@@ -3,7 +3,6 @@ import json
 import os
 from datetime import datetime
 from database import (
-    init_database, 
     save_participant, 
     save_evaluation,
     get_evaluation_statistics,
@@ -16,11 +15,40 @@ def load_dataset():
     with open('final_dataset.json', 'r') as f:
         return json.load(f)
 
-# Initialize database on startup
-try:
-    init_database()
-except Exception as e:
-    st.error(f"Database initialization error: {str(e)}")
+def statistics_page():
+    """Display statistics page"""
+    st.set_page_config(page_title="Statistik Evaluasi - Lagi Bentar", layout="wide")
+    
+    st.title("📊 Statistik Evaluasi MOS")
+    st.markdown("---")
+    
+    try:
+        stats = get_evaluation_statistics()
+        
+        st.subheader("📈 Ringkasan Statistik")
+        col1, col2 = st.columns(2)
+        
+        with col1:
+            st.metric("Total Partisipan", stats['total_participants'])
+        with col2:
+            avg_all = sum([s['average_rating'] for s in stats['model_statistics']]) / len(stats['model_statistics']) if stats['model_statistics'] else 0
+            st.metric("Rata-rata Semua Model", f"{avg_all:.2f}")
+        
+        st.markdown("---")
+        st.markdown("### 🎯 Statistik Per Model")
+        
+        for stat in stats['model_statistics']:
+            with st.container():
+                col1, col2 = st.columns([2, 1])
+                with col1:
+                    st.write(f"**Model {stat['model_id']}**")
+                    st.caption(stat['model_name'])
+                with col2:
+                    st.metric("Rata-rata Rating", f"{stat['average_rating']:.2f}")
+                st.markdown("---")
+                
+    except Exception as e:
+        st.error(f"Error mengambil statistik: {str(e)}")
 
 def main():
     st.set_page_config(page_title="MOS Evaluation Form - Lagi Bentar", layout="wide")
@@ -274,8 +302,28 @@ def main():
                 with open(submission_file, 'w') as f:
                     json.dump(submission, f, indent=2)
                 
+                # Success messages
                 st.success(f"✅ Terima kasih {participant_name}! Evaluasi Anda telah berhasil disimpan ke database.")
                 st.info(f"📊 Total {evaluation_count} evaluasi tersimpan (Participant ID: {participant_id})")
+                
+                # Additional confirmation message
+                st.markdown("""
+                ### 🎉 Submission Berhasil!
+                
+                Data evaluasi Anda telah tersimpan dengan aman. Berikut rinciannya:
+                - **Nama:** {name}
+                - **Email:** {email}
+                - **Total Evaluasi:** {count} penilaian
+                - **Waktu Submit:** {time}
+                
+                Terima kasih atas partisipasi Anda dalam penelitian ini! 🙏
+                """.format(
+                    name=participant_name,
+                    email=participant_email,
+                    count=evaluation_count,
+                    time=datetime.now().strftime("%d %B %Y, %H:%M:%S")
+                ))
+                
                 st.balloons()
                 
                 # Show summary
@@ -285,42 +333,6 @@ def main():
             except Exception as e:
                 st.error(f"❌ Error saat menyimpan evaluasi: {str(e)}")
                 st.info("Data tetap tersimpan sebagai backup file di folder 'submissions'")
-    
-    # Add statistics section at the bottom
-    st.markdown("---")
-    if st.checkbox("📈 Lihat Statistik Evaluasi", key="show_stats"):
-        try:
-            stats = get_evaluation_statistics()
-            
-            st.subheader("📊 Statistik Evaluasi")
-            col1, col2, col3 = st.columns(3)
-            
-            with col1:
-                st.metric("Total Partisipan", stats['total_participants'])
-            with col2:
-                st.metric("Total Evaluasi", stats['total_evaluations'])
-            with col3:
-                avg_all = sum([s['average_rating'] for s in stats['model_statistics']]) / len(stats['model_statistics']) if stats['model_statistics'] else 0
-                st.metric("Rata-rata Semua Model", f"{avg_all:.2f}")
-            
-            st.markdown("### Statistik Per Model")
-            
-            for stat in stats['model_statistics']:
-                with st.container():
-                    col1, col2, col3, col4 = st.columns(4)
-                    with col1:
-                        st.write(f"**Model {stat['model_id']}**")
-                        st.caption(stat['model_name'])
-                    with col2:
-                        st.metric("Rata-rata", f"{stat['average_rating']:.2f}")
-                    with col3:
-                        st.metric("Total Rating", stat['total_ratings'])
-                    with col4:
-                        st.metric("Range", f"{stat['min_rating']} - {stat['max_rating']}")
-                    st.markdown("---")
-                    
-        except Exception as e:
-            st.error(f"Error mengambil statistik: {str(e)}")
 
 if __name__ == "__main__":
     main()
