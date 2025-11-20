@@ -12,14 +12,13 @@ original_sunda_samples = [
 ]
 
 original_indonesian_samples = [
-    {"audio_filepath": "/P2/output/indonesian_dataset/wavs_resampled/a_TVRI_BS_071119_0089.wav", "text": "Kabarnya Menteri Pendidikan Republik Indonesia", "duration": 9.839954648526078},
-{"audio_filepath": "/P2/output/indonesian_dataset/wavs_resampled/a_TVRI_BS_071119_0214.wav", "text": "Presiden Jokowi Dodo didampingi Wakil Presiden Maruf Amin menghadiri perayaan HUT ke-55 Partai Golkar di Jakarta.", "duration": 8.719954648526077},
-{"audio_filepath": "/P2/output/indonesian_dataset/wavs_resampled/a_TVRI_BS_071119_0177.wav", "text": "Dan berdasarkan keterangan dari keluarga", "duration": 9.199954648526077},
-{"audio_filepath": "/P2/output/indonesian_dataset/wavs_resampled/r_TVRI_BS_071119_0214.wav", "text": "Presiden Jokowi Dodo didampingi Wakil Presiden Maruf Amin menghadiri perayaan HUT ke-55 Partai Golkar di Jakarta.", "duration": 9.079954648526076},
-{"audio_filepath": "/P2/output/indonesian_dataset/wavs_resampled/a_TVRI_BS_071119_0218.wav", "text": "Partai Golkar sebagai tulang punggung pemerintahan", "duration": 5.359954648526077},
-{"audio_filepath": "/P2/output/indonesian_dataset/wavs_resampled/a_TVRI_BS_071119_0212.wav", "text": "Usai bertemu", "duration": 6.279954648526077},
-{"audio_filepath": "/P2/output/indonesian_dataset/wavs_resampled/r_TVRI_BS_071119_0246.wav", "text": "Selain itu", "duration": 12.679954648526078},
-{"audio_filepath": "/P2/output/indonesian_dataset/wavs_resampled/r_TVRI_BS_071119_0177.wav", "text": "Dan berdasarkan keterangan dari keluarga", "duration": 6.279954648526077},
-{"audio_filepath": "/P2/output/indonesian_dataset/wavs_resampled/r_TVRI_BS_071119_0121.wav", "text": "seperti tsunami", "duration": 5.639954648526077},
-{"audio_filepath": "/P2/output/indonesian_dataset/wavs_resampled/a_TVRI_BS_071119_0019.wav", "text": "Brigadir AM dijerat pasal 351 ayat 3 KUHP dan atau pasal 359 KUHP", "duration": 14.279954648526077},
-]
+{"audio_filepath": "/P2/output/indonesian_dataset/wavs_resampled/a_TVRI_BS_071119_0246.wav", "text": "Selain itu Wakil Panglima juga bertugas melaksanakan tugas Panglima apabila Panglima berhalangan sementara waktu dan atau berhalangan tetap dan melaksanakan tugas lain yang diperintahkan oleh Panglima.", "duration": 13.439954648526077},
+{"audio_filepath": "/P2/output/indonesian_dataset/wavs_resampled/a_TVRI_BS_071119_0265.wav", "text": "Deputi Gubernur Bank Indonesia Dodi Budi Waluyo menjelaskan masalah global menjadi salah satu penyebab utama ekonomi dunia yang semuanya terdampak oleh perang dagang.", "duration": 10.479954648526077},
+{"audio_filepath": "/P2/output/indonesian_dataset/wavs_resampled/a_TVRI_BS_071119_0177.wav", "text": "Dan berdasarkan keterangan dari keluarga Sri Rahayu merupakan TKI legal", "duration": 9.199954648526077},
+{"audio_filepath": "/P2/output/indonesian_dataset/wavs_resampled/a_TVRI_BS_071119_0319.wav", "text": "Mereka juga menggunakan gawai atau gadget", "duration": 4.239954648526077},
+{"audio_filepath": "/P2/output/indonesian_dataset/wavs_resampled/a_TVRI_BS_071119_0383.wav", "text": "Vote melalui SMS polling ke nomor 99386 atau vote melalui aplikasi video.com blibli.com dan melalui situs pga.blibli.com", "duration": 11.839954648526078},
+{"audio_filepath": "/P2/output/indonesian_dataset/wavs_resampled/r_TVRI_BS_071119_0265.wav", "text": "Deputi Gubernur Bank Indonesia Dodi Budi Waluyo menjelaskan masalah global menjadi salah satu penyebab utama ekonomi dunia yang semuanya terdampak oleh perang dagang.", "duration": 10.839954648526078},
+{"audio_filepath": "/P2/output/indonesian_dataset/wavs_resampled/r_TVRI_BS_071119_0246.wav", "text": "Selain itu Wakil Panglima juga bertugas melaksanakan tugas Panglima apabila Panglima berhalangan sementara waktu dan atau berhalangan tetap dan melaksanakan tugas lain yang diperintahkan oleh Panglima.", "duration": 12.679954648526078},
+{"audio_filepath": "/P2/output/indonesian_dataset/wavs_resampled/r_TVRI_BS_071119_0169.wav", "text": "Sementara memang hasil report medikalnya belum kita dapatkan.", "duration": 4.759954648526077},
+{"audio_filepath": "/P2/output/indonesian_dataset/wavs_resampled/r_TVRI_BS_071119_0089.wav", "text": "Kabarnya Menteri Pendidikan Republik Indonesia Menteri Nadiem Makarim melakukan sidak dan juga meninjau secara langsung 4 ruang kelas yang ambruk beberapa saat yang lalu.", "duration": 11.439954648526077},
+{"audio_filepath": "/P2/output/indonesian_dataset/wavs_resampled/r_TVRI_BS_071119_0215.wav", "text": "Dalam sambutannya Kepala Negara mengungkapkan 55 tahun merupakan usia yang matang bagi partai politik.", "duration": 7.4799546485260775}],
