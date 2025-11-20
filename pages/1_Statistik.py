@@ -48,10 +48,20 @@ try:
         # Convert to DataFrame for better display
         df = pd.DataFrame(participants)
         df['created_at'] = pd.to_datetime(df['created_at']).dt.strftime('%d %B %Y, %H:%M:%S')
+        
+        # Sensor participant names (show first and last letter, mask the rest)
+        def sensor_name(name):
+            if len(name) <= 2:
+                return name[0] + '*' * (len(name) - 1)
+            return name[0] + '*' * (len(name) - 2) + name[-1]
+        
+        df['name'] = df['name'].apply(sensor_name)
+        
+        # Drop email column and rename others
+        df = df.drop('email', axis=1).drop('id', axis=1)
         df = df.rename(columns={
             'id': 'ID',
             'name': 'Nama',
-            'email': 'Email',
             'created_at': 'Waktu Submit',
             'total_evaluations': 'Total Evaluasi'
         })

@@ -89,6 +89,9 @@ def main():
     - **3 - Fair:** Kualitas cukup, sedikit tidak natural
     - **2 - Poor:** Kualitas kurang, tidak natural
     - **1 - Bad:** Kualitas sangat buruk, sangat tidak natural
+                
+
+    Kalau sudah selesai harap mengklik submit hingga muncul Balon warna warni 🎈🎈
     """)
     
     st.markdown("---")
