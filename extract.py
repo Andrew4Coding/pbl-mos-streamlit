@@ -12,14 +12,14 @@ original_sunda_samples = [
 ]
 
 original_indonesian_samples = [
-    {"audio_filepath": "./original_indonesian/r_TVRI_BS_071119_0196.wav", "text": "Sementara Partai Nasdem mengungkapkan pertemuan Ketua Umumnya Surya Paloh dengan Presiden PKS Sohibul Iman", "duration": 7.719954648526077},
-{"audio_filepath": "./original_indonesian/a_TVRI_BS_071119_0004.wav", "text": "Selamat malam Anda menyaksikan Indonesia hari ini", "duration": 9.359954648526077},
-{"audio_filepath": "./original_indonesian/r_TVRI_BS_071119_0161.wav", "text": "Dan kedatangan jenazah Sri Rahayu ini juga disambut oleh isak tangis dari pihak keluarga", "duration": 10.839954648526078},
-{"audio_filepath": "./original_indonesian/a_TVRI_BS_071119_0177.wav", "text": "Dan berdasarkan keterangan dari keluarga", "duration": 9.199954648526077},
-{"audio_filepath": "./original_indonesian/r_TVRI_BS_071119_0177.wav", "text": "Dan berdasarkan keterangan dari keluarga", "duration": 6.279954648526077},
-{"audio_filepath": "./original_indonesian/r_TVRI_BS_071119_0309.wav", "text": "Dua hal tersebut yaitu kualitas konten", "duration": 8.199954648526077},
-{"audio_filepath": "./original_indonesian/a_TVRI_BS_071119_0158.wav", "text": "Sri Rahayu 20 tahun merupakan buruh migran asal Karawang Jawa Barat", "duration": 5.759954648526077},
-{"audio_filepath": "./original_indonesian/r_TVRI_BS_071119_0335.wav", "text": "tentu saja kita akan menantikan bagaimana", "duration": 4.399954648526077},
-{"audio_filepath": "./original_indonesian/a_TVRI_BS_071119_0173.wav", "text": "di dekat rumah tinggalnya di Kabupaten Karawang", "duration": 6.039954648526077},
-{"audio_filepath": "./original_indonesian/a_TVRI_BS_071119_0084.wav", "text": "Saudara Menteri Pendidikan dan Kebudayaan", "duration": 8.959954648526077},
+    {"audio_filepath": "/P2/output/indonesian_dataset/wavs_resampled/a_TVRI_BS_071119_0089.wav", "text": "Kabarnya Menteri Pendidikan Republik Indonesia", "duration": 9.839954648526078},
+{"audio_filepath": "/P2/output/indonesian_dataset/wavs_resampled/a_TVRI_BS_071119_0214.wav", "text": "Presiden Jokowi Dodo didampingi Wakil Presiden Maruf Amin menghadiri perayaan HUT ke-55 Partai Golkar di Jakarta.", "duration": 8.719954648526077},
+{"audio_filepath": "/P2/output/indonesian_dataset/wavs_resampled/a_TVRI_BS_071119_0177.wav", "text": "Dan berdasarkan keterangan dari keluarga", "duration": 9.199954648526077},
+{"audio_filepath": "/P2/output/indonesian_dataset/wavs_resampled/r_TVRI_BS_071119_0214.wav", "text": "Presiden Jokowi Dodo didampingi Wakil Presiden Maruf Amin menghadiri perayaan HUT ke-55 Partai Golkar di Jakarta.", "duration": 9.079954648526076},
+{"audio_filepath": "/P2/output/indonesian_dataset/wavs_resampled/a_TVRI_BS_071119_0218.wav", "text": "Partai Golkar sebagai tulang punggung pemerintahan", "duration": 5.359954648526077},
+{"audio_filepath": "/P2/output/indonesian_dataset/wavs_resampled/a_TVRI_BS_071119_0212.wav", "text": "Usai bertemu", "duration": 6.279954648526077},
+{"audio_filepath": "/P2/output/indonesian_dataset/wavs_resampled/r_TVRI_BS_071119_0246.wav", "text": "Selain itu", "duration": 12.679954648526078},
+{"audio_filepath": "/P2/output/indonesian_dataset/wavs_resampled/r_TVRI_BS_071119_0177.wav", "text": "Dan berdasarkan keterangan dari keluarga", "duration": 6.279954648526077},
+{"audio_filepath": "/P2/output/indonesian_dataset/wavs_resampled/r_TVRI_BS_071119_0121.wav", "text": "seperti tsunami", "duration": 5.639954648526077},
+{"audio_filepath": "/P2/output/indonesian_dataset/wavs_resampled/a_TVRI_BS_071119_0019.wav", "text": "Brigadir AM dijerat pasal 351 ayat 3 KUHP dan atau pasal 359 KUHP", "duration": 14.279954648526077},
 ]
