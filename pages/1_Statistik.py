@@ -16,21 +16,27 @@ try:
     with col1:
         st.metric("Total Partisipan", stats['total_participants'])
     with col2:
-        avg_all = sum([s['average_rating'] for s in stats['model_statistics']]) / len(stats['model_statistics']) if stats['model_statistics'] else 0
-        st.metric("Rata-rata Semua Model", f"{avg_all:.2f}")
+        if stats['model_statistics']:
+            avg_all = sum([float(s['average_rating']) for s in stats['model_statistics']]) / len(stats['model_statistics'])
+            st.metric("Rata-rata Semua Model", f"{avg_all:.2f}")
+        else:
+            st.metric("Rata-rata Semua Model", "0.00")
     
     st.markdown("---")
     st.markdown("### 🎯 Statistik Per Model")
     
-    for stat in stats['model_statistics']:
-        with st.container():
-            col1, col2 = st.columns([2, 1])
-            with col1:
-                st.write(f"**Model {stat['model_id']}**")
-                st.caption(stat['model_name'])
-            with col2:
-                st.metric("Rata-rata Rating", f"{stat['average_rating']:.2f}")
-            st.markdown("---")
+    if stats['model_statistics']:
+        for stat in stats['model_statistics']:
+            with st.container():
+                col1, col2 = st.columns([2, 1])
+                with col1:
+                    st.write(f"**Model {stat['model_id']}**")
+                    st.caption(stat['model_name'])
+                with col2:
+                    st.metric("Rata-rata Rating", f"{float(stat['average_rating']):.2f}")
+                st.markdown("---")
+    else:
+        st.info("Belum ada data evaluasi untuk ditampilkan.")
     
     # Display participants list
     st.markdown("---")

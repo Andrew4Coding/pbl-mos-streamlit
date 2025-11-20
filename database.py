@@ -1,6 +1,7 @@
 import psycopg2
 from psycopg2.extras import RealDictCursor
 import os
+import json
 from dotenv import load_dotenv
 from datetime import datetime
 
@@ -42,28 +43,10 @@ def init_database():
             CREATE TABLE IF NOT EXISTS evaluations (
                 id SERIAL PRIMARY KEY,
                 participant_id INTEGER REFERENCES participants(id),
-                sample_type VARCHAR(50) NOT NULL,
-                sample_index INTEGER NOT NULL,
-                model_id VARCHAR(10) NOT NULL,
-                model_name VARCHAR(255) NOT NULL,
-                rating INTEGER NOT NULL CHECK (rating >= 1 AND rating <= 5),
-                audio_path TEXT,
-                original_text TEXT,
+                evaluation_data JSONB NOT NULL,
                 created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
             )
         """)
-        
-        # Create index for faster queries
-        cur.execute("""
-            CREATE INDEX IF NOT EXISTS idx_evaluations_participant 
-            ON evaluations(participant_id)
-        """)
-        
-        cur.execute("""
-            CREATE INDEX IF NOT EXISTS idx_evaluations_model 
-            ON evaluations(model_id)
-        """)
-        
         conn.commit()
         print("Database tables created successfully!")
         
@@ -97,17 +80,17 @@ def save_participant(name, email):
         cur.close()
         conn.close()
 
-def save_evaluation(participant_id, sample_type, sample_index, model_id, model_name, rating, audio_path, original_text):
-    """Save evaluation rating"""
+def save_evaluation(participant_id, evaluation_data):
+    """Save evaluation data as JSON"""
     conn = get_db_connection()
     cur = conn.cursor()
     
     try:
         cur.execute("""
             INSERT INTO evaluations 
-            (participant_id, sample_type, sample_index, model_id, model_name, rating, audio_path, original_text)
-            VALUES (%s, %s, %s, %s, %s, %s, %s, %s)
-        """, (participant_id, sample_type, sample_index, model_id, model_name, rating, audio_path, original_text))
+            (participant_id, evaluation_data)
+            VALUES (%s, %s)
+        """, (participant_id, json.dumps(evaluation_data)))
         
         conn.commit()
         
@@ -129,13 +112,7 @@ def get_all_evaluations():
                 e.id,
                 p.name as participant_name,
                 p.email as participant_email,
-                e.sample_type,
-                e.sample_index,
-                e.model_id,
-                e.model_name,
-                e.rating,
-                e.audio_path,
-                e.original_text,
+                e.evaluation_data,
                 e.created_at
             FROM evaluations e
             JOIN participants p ON e.participant_id = p.id
@@ -156,18 +133,19 @@ def get_evaluation_statistics():
     cur = conn.cursor(cursor_factory=RealDictCursor)
     
     try:
-        # Get average ratings by model
+        # Get average ratings by model from JSONB data
         cur.execute("""
             SELECT 
-                model_id,
-                model_name,
+                rating->>'model_id' as model_id,
+                rating->>'model_name' as model_name,
                 COUNT(*) as total_ratings,
-                ROUND(AVG(rating)::numeric, 2) as average_rating,
-                MIN(rating) as min_rating,
-                MAX(rating) as max_rating
-            FROM evaluations
-            GROUP BY model_id, model_name
-            ORDER BY model_id
+                ROUND(AVG((rating->>'rating')::numeric), 2) as average_rating,
+                MIN((rating->>'rating')::integer) as min_rating,
+                MAX((rating->>'rating')::integer) as max_rating
+            FROM evaluations e,
+                 jsonb_array_elements(e.evaluation_data->'ratings') as rating
+            GROUP BY rating->>'model_id', rating->>'model_name'
+            ORDER BY rating->>'model_id'
         """)
         
         model_stats = cur.fetchall()

@@ -3,6 +3,7 @@ import json
 import os
 from datetime import datetime
 from database import (
+    init_database,
     save_participant, 
     save_evaluation,
     get_evaluation_statistics,
@@ -236,9 +237,14 @@ def main():
                 # Save participant to database
                 participant_id = save_participant(participant_name, participant_email)
                 
-                # Save all evaluations to database
+                # Collect all evaluations into a JSON structure
+                evaluation_data = {
+                    'ratings': []
+                }
                 evaluation_count = 0
-                
+
+                print(f"Collecting evaluations for participant ID {participant_id}")
+
                 # Process Sunda evaluations
                 for idx, sample in enumerate(sunda_samples):
                     models = [
@@ -252,16 +258,15 @@ def main():
                         rating_key = f"sunda_{idx}_model_{model_id}"
                         if rating_key in st.session_state.responses:
                             rating = st.session_state.responses[rating_key]
-                            save_evaluation(
-                                participant_id=participant_id,
-                                sample_type='sunda',
-                                sample_index=idx,
-                                model_id=model_id,
-                                model_name=model_name,
-                                rating=rating,
-                                audio_path=audio_path,
-                                original_text=sample['original_text']
-                            )
+                            evaluation_data['ratings'].append({
+                                'sample_type': 'sunda',
+                                'sample_index': idx,
+                                'model_id': model_id,
+                                'model_name': model_name,
+                                'rating': rating,
+                                'audio_path': audio_path,
+                                'original_text': sample['original_text']
+                            })
                             evaluation_count += 1
                 
                 # Process Indonesian evaluations
@@ -275,18 +280,21 @@ def main():
                         rating_key = f"indonesian_{idx}_model_{model_id}"
                         if rating_key in st.session_state.responses:
                             rating = st.session_state.responses[rating_key]
-                            save_evaluation(
-                                participant_id=participant_id,
-                                sample_type='indonesian',
-                                sample_index=idx,
-                                model_id=model_id,
-                                model_name=model_name,
-                                rating=rating,
-                                audio_path=audio_path,
-                                original_text=sample['original_text']
-                            )
+                            evaluation_data['ratings'].append({
+                                'sample_type': 'indonesian',
+                                'sample_index': idx,
+                                'model_id': model_id,
+                                'model_name': model_name,
+                                'rating': rating,
+                                'audio_path': audio_path,
+                                'original_text': sample['original_text']
+                            })
                             evaluation_count += 1
                 
+                # Save all evaluations as a single JSON object
+                save_evaluation(participant_id, evaluation_data)
+                print(f"Saved {evaluation_count} evaluations for participant ID {participant_id}")
+
                 # Success messages
                 st.success(f"✅ Terima kasih {participant_name}! Evaluasi Anda telah berhasil disimpan ke database.")
                 st.info(f"📊 Total {evaluation_count} evaluasi tersimpan (Participant ID: {participant_id})")
