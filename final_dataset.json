@@ -1,0 +1,182 @@
+[
+  {
+    "type": "sunda",
+    "original_audio": "./audios/original_sunda/sum_04511_00326032573.wav",
+    "original_text": "ayeuna stadion jalak harupat tiasa dipilarian dina peta",
+    "pretrained_fastpitch_audio": "./audios/pretrained_outputs_sunda/fastpitch_hifigan/sample_00.wav",
+    "finetuned_fastpitch_audio": "./audios/finetuned_outputs_sunda/fastpitch_hifigan/sample_00.wav",
+    "pretrained_vits": "./audios/pretrained_outputs_sunda/vits/sample_00.wav",
+    "finetuned_vits": "./audios/finetuned_outputs_sunda/vits/sample_00.wav"
+  },
+  {
+    "type": "sunda",
+    "original_audio": "./audios/original_sunda/sum_04511_00456788259.wav",
+    "original_text": "turis mancanagara keur ningali gerhana bulan poe senen di libya",
+    "pretrained_fastpitch_audio": "./audios/pretrained_outputs_sunda/fastpitch_hifigan/sample_01.wav",
+    "finetuned_fastpitch_audio": "./audios/finetuned_outputs_sunda/fastpitch_hifigan/sample_01.wav",
+    "pretrained_vits": "./audios/pretrained_outputs_sunda/vits/sample_01.wav",
+    "finetuned_vits": "./audios/finetuned_outputs_sunda/vits/sample_01.wav"
+  },
+  {
+    "type": "sunda",
+    "original_audio": "./audios/original_sunda/sum_04511_00556982240.wav",
+    "original_text": "dina bulan puasa taun sarebu salapan ratus salapan puluh genep seueur umat islam nu ngalakonan ibadah umroh",
+    "pretrained_fastpitch_audio": "./audios/pretrained_outputs_sunda/fastpitch_hifigan/sample_02.wav",
+    "finetuned_fastpitch_audio": "./audios/finetuned_outputs_sunda/fastpitch_hifigan/sample_02.wav",
+    "pretrained_vits": "./audios/pretrained_outputs_sunda/vits/sample_02.wav",
+    "finetuned_vits": "./audios/finetuned_outputs_sunda/vits/sample_02.wav"
+  },
+  {
+    "type": "sunda",
+    "original_audio": "./audios/original_sunda/sum_04511_00660901768.wav",
+    "original_text": "ayeuna omset warung pasta ningkat dugi ka sapuluh juta rupiah",
+    "pretrained_fastpitch_audio": "./audios/pretrained_outputs_sunda/fastpitch_hifigan/sample_03.wav",
+    "finetuned_fastpitch_audio": "./audios/finetuned_outputs_sunda/fastpitch_hifigan/sample_03.wav",
+    "pretrained_vits": "./audios/pretrained_outputs_sunda/vits/sample_03.wav",
+    "finetuned_vits": "./audios/finetuned_outputs_sunda/vits/sample_03.wav"
+  },
+  {
+    "type": "sunda",
+    "original_audio": "./audios/original_sunda/sum_04511_01079778287.wav",
+    "original_text": "seniman nuju ngalukis sirkuit valencia",
+    "pretrained_fastpitch_audio": "./audios/pretrained_outputs_sunda/fastpitch_hifigan/sample_04.wav",
+    "finetuned_fastpitch_audio": "./audios/finetuned_outputs_sunda/fastpitch_hifigan/sample_04.wav",
+    "pretrained_vits": "./audios/pretrained_outputs_sunda/vits/sample_04.wav",
+    "finetuned_vits": "./audios/finetuned_outputs_sunda/vits/sample_04.wav"
+  },
+  {
+    "type": "sunda",
+    "original_audio": "./audios/original_sunda/sum_04511_01167436082.wav",
+    "original_text": "kompleks perumahan anu caket museum benda kuno keraton kasepuhan agreung pisan",
+    "pretrained_fastpitch_audio": "./audios/pretrained_outputs_sunda/fastpitch_hifigan/sample_05.wav",
+    "finetuned_fastpitch_audio": "./audios/finetuned_outputs_sunda/fastpitch_hifigan/sample_05.wav",
+    "pretrained_vits": "./audios/pretrained_outputs_sunda/vits/sample_05.wav",
+    "finetuned_vits": "./audios/finetuned_outputs_sunda/vits/sample_05.wav"
+  },
+  {
+    "type": "sunda",
+    "original_audio": "./audios/original_sunda/sum_04511_01248777749.wav",
+    "original_text": "panonton ting haruleng ningali beyonce keur nyanyi di tipi",
+    "pretrained_fastpitch_audio": "./audios/pretrained_outputs_sunda/fastpitch_hifigan/sample_06.wav",
+    "finetuned_fastpitch_audio": "./audios/finetuned_outputs_sunda/fastpitch_hifigan/sample_06.wav",
+    "pretrained_vits": "./audios/pretrained_outputs_sunda/vits/sample_06.wav",
+    "finetuned_vits": "./audios/finetuned_outputs_sunda/vits/sample_06.wav"
+  },
+  {
+    "type": "sunda",
+    "original_audio": "./audios/original_sunda/sum_04511_01393308271.wav",
+    "original_text": "panonton ting haruleng ningali hillary clinton keur nyanyi di tipi",
+    "pretrained_fastpitch_audio": "./audios/pretrained_outputs_sunda/fastpitch_hifigan/sample_07.wav",
+    "finetuned_fastpitch_audio": "./audios/finetuned_outputs_sunda/fastpitch_hifigan/sample_07.wav",
+    "pretrained_vits": "./audios/pretrained_outputs_sunda/vits/sample_07.wav",
+    "finetuned_vits": "./audios/finetuned_outputs_sunda/vits/sample_07.wav"
+  },
+  {
+    "type": "sunda",
+    "original_audio": "./audios/original_sunda/sum_04511_01598659259.wav",
+    "original_text": "panonton ting haruleng ningali marc markwes keur nyanyi di tipi",
+    "pretrained_fastpitch_audio": "./audios/pretrained_outputs_sunda/fastpitch_hifigan/sample_08.wav",
+    "finetuned_fastpitch_audio": "./audios/finetuned_outputs_sunda/fastpitch_hifigan/sample_08.wav",
+    "pretrained_vits": "./audios/pretrained_outputs_sunda/vits/sample_08.wav",
+    "finetuned_vits": "./audios/finetuned_outputs_sunda/vits/sample_08.wav"
+  },
+  {
+    "type": "sunda",
+    "original_audio": "./audios/original_sunda/sum_04511_01638446422.wav",
+    "original_text": "loba rumaja ulin ka waduk saguling",
+    "pretrained_fastpitch_audio": "./audios/pretrained_outputs_sunda/fastpitch_hifigan/sample_09.wav",
+    "finetuned_fastpitch_audio": "./audios/finetuned_outputs_sunda/fastpitch_hifigan/sample_09.wav",
+    "pretrained_vits": "./audios/pretrained_outputs_sunda/vits/sample_09.wav",
+    "finetuned_vits": "./audios/finetuned_outputs_sunda/vits/sample_09.wav"
+  },
+  {
+    "type": "indonesian",
+    "original_audio": "./audios/original_indonesian/indonesian_dataset/r_TVRI_BS_071119_0196.wav",
+    "original_text": "Sementara Partai Nasdem mengungkapkan pertemuan Ketua Umumnya Surya Paloh dengan Presiden PKS Sohibul Iman",
+    "pretrained_fastpitch_audio": null,
+    "finetuned_fastpitch_audio": null,
+    "pretrained_vits": "./audios/pretrained_outputs_indo/vits/baseline_sample_00.wav",
+    "finetuned_vits": "./audios/finetuned_outputs_indo/vits/finetuned_sample_00.wav"
+  },
+  {
+    "type": "indonesian",
+    "original_audio": "./audios/original_indonesian/indonesian_dataset/a_TVRI_BS_071119_0004.wav",
+    "original_text": "Selamat malam Anda menyaksikan Indonesia hari ini",
+    "pretrained_fastpitch_audio": null,
+    "finetuned_fastpitch_audio": null,
+    "pretrained_vits": "./audios/pretrained_outputs_indo/vits/baseline_sample_01.wav",
+    "finetuned_vits": "./audios/finetuned_outputs_indo/vits/finetuned_sample_01.wav"
+  },
+  {
+    "type": "indonesian",
+    "original_audio": "./audios/original_indonesian/indonesian_dataset/r_TVRI_BS_071119_0161.wav",
+    "original_text": "Dan kedatangan jenazah Sri Rahayu ini juga disambut oleh isak tangis dari pihak keluarga",
+    "pretrained_fastpitch_audio": null,
+    "finetuned_fastpitch_audio": null,
+    "pretrained_vits": "./audios/pretrained_outputs_indo/vits/baseline_sample_02.wav",
+    "finetuned_vits": "./audios/finetuned_outputs_indo/vits/finetuned_sample_02.wav"
+  },
+  {
+    "type": "indonesian",
+    "original_audio": "./audios/original_indonesian/indonesian_dataset/a_TVRI_BS_071119_0177.wav",
+    "original_text": "Dan berdasarkan keterangan dari keluarga",
+    "pretrained_fastpitch_audio": null,
+    "finetuned_fastpitch_audio": null,
+    "pretrained_vits": "./audios/pretrained_outputs_indo/vits/baseline_sample_03.wav",
+    "finetuned_vits": "./audios/finetuned_outputs_indo/vits/finetuned_sample_03.wav"
+  },
+  {
+    "type": "indonesian",
+    "original_audio": "./audios/original_indonesian/indonesian_dataset/r_TVRI_BS_071119_0177.wav",
+    "original_text": "Dan berdasarkan keterangan dari keluarga",
+    "pretrained_fastpitch_audio": null,
+    "finetuned_fastpitch_audio": null,
+    "pretrained_vits": "./audios/pretrained_outputs_indo/vits/baseline_sample_04.wav",
+    "finetuned_vits": "./audios/finetuned_outputs_indo/vits/finetuned_sample_04.wav"
+  },
+  {
+    "type": "indonesian",
+    "original_audio": "./audios/original_indonesian/indonesian_dataset/r_TVRI_BS_071119_0309.wav",
+    "original_text": "Dua hal tersebut yaitu kualitas konten",
+    "pretrained_fastpitch_audio": null,
+    "finetuned_fastpitch_audio": null,
+    "pretrained_vits": "./audios/pretrained_outputs_indo/vits/baseline_sample_05.wav",
+    "finetuned_vits": "./audios/finetuned_outputs_indo/vits/finetuned_sample_05.wav"
+  },
+  {
+    "type": "indonesian",
+    "original_audio": "./audios/original_indonesian/indonesian_dataset/a_TVRI_BS_071119_0158.wav",
+    "original_text": "Sri Rahayu 20 tahun merupakan buruh migran asal Karawang Jawa Barat",
+    "pretrained_fastpitch_audio": null,
+    "finetuned_fastpitch_audio": null,
+    "pretrained_vits": "./audios/pretrained_outputs_indo/vits/baseline_sample_06.wav",
+    "finetuned_vits": "./audios/finetuned_outputs_indo/vits/finetuned_sample_06.wav"
+  },
+  {
+    "type": "indonesian",
+    "original_audio": "./audios/original_indonesian/indonesian_dataset/r_TVRI_BS_071119_0335.wav",
+    "original_text": "tentu saja kita akan menantikan bagaimana",
+    "pretrained_fastpitch_audio": null,
+    "finetuned_fastpitch_audio": null,
+    "pretrained_vits": "./audios/pretrained_outputs_indo/vits/baseline_sample_07.wav",
+    "finetuned_vits": "./audios/finetuned_outputs_indo/vits/finetuned_sample_07.wav"
+  },
+  {
+    "type": "indonesian",
+    "original_audio": "./audios/original_indonesian/indonesian_dataset/a_TVRI_BS_071119_0173.wav",
+    "original_text": "di dekat rumah tinggalnya di Kabupaten Karawang",
+    "pretrained_fastpitch_audio": null,
+    "finetuned_fastpitch_audio": null,
+    "pretrained_vits": "./audios/pretrained_outputs_indo/vits/baseline_sample_08.wav",
+    "finetuned_vits": "./audios/finetuned_outputs_indo/vits/finetuned_sample_08.wav"
+  },
+  {
+    "type": "indonesian",
+    "original_audio": "./audios/original_indonesian/indonesian_dataset/a_TVRI_BS_071119_0084.wav",
+    "original_text": "Saudara Menteri Pendidikan dan Kebudayaan",
+    "pretrained_fastpitch_audio": null,
+    "finetuned_fastpitch_audio": null,
+    "pretrained_vits": "./audios/pretrained_outputs_indo/vits/baseline_sample_09.wav",
+    "finetuned_vits": "./audios/finetuned_outputs_indo/vits/finetuned_sample_09.wav"
+  }
+]
