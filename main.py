@@ -287,21 +287,6 @@ def main():
                             )
                             evaluation_count += 1
                 
-                # Also save to JSON file as backup
-                submission = {
-                    'timestamp': datetime.now().isoformat(),
-                    'participant_id': participant_id,
-                    'participant_name': participant_name,
-                    'participant_email': participant_email,
-                    'responses': st.session_state.responses
-                }
-                
-                submission_file = f'submissions/submission_{datetime.now().strftime("%Y%m%d_%H%M%S")}_{participant_name.replace(" ", "_")}.json'
-                os.makedirs('submissions', exist_ok=True)
-                
-                with open(submission_file, 'w') as f:
-                    json.dump(submission, f, indent=2)
-                
                 # Success messages
                 st.success(f"✅ Terima kasih {participant_name}! Evaluasi Anda telah berhasil disimpan ke database.")
                 st.info(f"📊 Total {evaluation_count} evaluasi tersimpan (Participant ID: {participant_id})")
@@ -325,14 +310,9 @@ def main():
                 ))
                 
                 st.balloons()
-                
-                # Show summary
-                with st.expander("📊 Lihat Ringkasan Penilaian Anda"):
-                    st.json(submission)
                     
             except Exception as e:
                 st.error(f"❌ Error saat menyimpan evaluasi: {str(e)}")
-                st.info("Data tetap tersimpan sebagai backup file di folder 'submissions'")
 
 if __name__ == "__main__":
     main()
