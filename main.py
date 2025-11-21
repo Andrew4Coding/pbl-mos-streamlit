@@ -60,8 +60,8 @@ def main():
     
     st.markdown("""
     ### Perkenalkan kami dari kelompok "Lagi Bentar" yang terdiri dari:
-    1. **Arya Raditya Kusuma (2306215816)**
-    2. **Andrew Devito Aryo (2306152494)**
+    1. **Radit Sigma**
+    2. **Andrew Sigma**
     
     ---
     
